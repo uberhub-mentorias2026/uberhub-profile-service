@@ -1,5 +1,7 @@
 package br.edu.iftm.uberhub_mentorias_profile_service.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import br.edu.iftm.uberhub_mentorias_profile_service.model.Profile;
@@ -16,5 +18,10 @@ public class ProfileService {
 
     public Profile salvarPerfil(Profile profile) {
         return profileRepository.save(profile);
+    }
+
+    // @Arthur
+    public List<Profile> listarPerfis() {
+        return profileRepository.findAll();
     }
 }
